@@ -17,10 +17,14 @@ WHERE department_id = 80;
 
 START TRANSACTION;
 
+SAVEPOINT antes_aumento;
+
 UPDATE employees
 SET salary = salary * 1.5;
 
 SELECT employee_id, salary
 FROM employees;
 
-ROLLBACK;
+ROLLBACK TO antes_aumento;
+
+COMMIT;
