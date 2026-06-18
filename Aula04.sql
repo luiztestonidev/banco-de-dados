@@ -127,3 +127,6 @@ SELECT
     (salary * 12) + (salary * 12 * commission_pct) AS "Remuneração Anual Total"
 FROM 
 	employees;
+    
+SELECT 
+	
